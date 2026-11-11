@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Grid.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package no.uib.inf101.grid;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Iterator;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Grid implements IGrid {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int rows;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int cols;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private List&#60;List&#60;Character&#62;&#62; cells;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Grid(int rows, int cols) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this(rows, cols, null);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public Grid(int rows, int cols, Character defaulValue) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.rows = rows;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.cols = cols;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        cells = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_22'/>
+22
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_22'>2</a>
+<span>
+1. &#60;init&#62; : changed conditional boundary &rarr; SURVIVED<br/>
+2. &#60;init&#62; : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        for (int i = 0; i &#60; rows; i++) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            List&#60;Character&#62; innerList = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_24'/>
+24
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_24'>2</a>
+<span>
+1. &#60;init&#62; : changed conditional boundary &rarr; SURVIVED<br/>
+2. &#60;init&#62; : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            for (int j = 0; j &#60; cols; j++) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                innerList.add(defaulValue);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            cells.add(innerList);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int rows() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_33'/>
+33
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_33'>1</a>
+<span>
+1. rows : replaced int return with 0 for no/uib/inf101/grid/Grid::rows &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return this.rows;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int cols() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_38'/>
+38
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_38'>1</a>
+<span>
+1. cols : replaced int return with 0 for no/uib/inf101/grid/Grid::cols &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return this.cols;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Iterator&#60;GridCell&#62; iterator() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        List&#60;GridCell&#62; gridCells = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_44'>2</a>
+<span>
+1. iterator : negated conditional &rarr; KILLED<br/>
+2. iterator : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for (int i = 0; i &#60; rows; i++) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_45'>2</a>
+<span>
+1. iterator : negated conditional &rarr; KILLED<br/>
+2. iterator : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for (int j = 0; j &#60; cols; j++) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                CellPosition pos = new CellPosition(i, j);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                GridCell cell = new GridCell(pos, get(pos));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                gridCells.add(cell);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_51'>1</a>
+<span>
+1. iterator : replaced return value with null for no/uib/inf101/grid/Grid::iterator &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return gridCells.iterator();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void set(CellPosition pos, Character symbol) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_56'/>
+56
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_56'>1</a>
+<span>
+1. set : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (!positionIsOnGrid(pos))</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new IndexOutOfBoundsException(&#34;Given position is not within grid: (&#34; + pos.row() + &#34;, &#34; + pos.col() + &#34;)&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int row = pos.row();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int col = pos.col();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        cells.get(row).set(col, symbol);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Character get(CellPosition pos) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_66'>1</a>
+<span>
+1. get : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (!positionIsOnGrid(pos))</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new IndexOutOfBoundsException(&#34;Given position is not within grid: (&#34; + pos.row() + &#34;, &#34; + pos.col() + &#34;)&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int row = pos.row();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int col = pos.col();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_71'/>
+71
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_71'>1</a>
+<span>
+1. get : replaced Character return value with 0 for no/uib/inf101/grid/Grid::get &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return cells.get(row).get(col);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean positionIsOnGrid(CellPosition pos) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_76'/>
+76
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_76'>4</a>
+<span>
+1. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+2. positionIsOnGrid : changed conditional boundary &rarr; KILLED<br/>
+3. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+4. positionIsOnGrid : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        boolean isWithinRowBound = pos.row() &#62;= 0 &#38;&#38; pos.row() &#60; rows;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_77'/>
+77
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_77'>4</a>
+<span>
+1. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+2. positionIsOnGrid : changed conditional boundary &rarr; KILLED<br/>
+3. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+4. positionIsOnGrid : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        boolean isWithinColBound = pos.col() &#62;= 0 &#38;&#38; pos.col() &#60; cols;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_79'/>
+79
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_79'>3</a>
+<span>
+1. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+2. positionIsOnGrid : negated conditional &rarr; KILLED<br/>
+3. positionIsOnGrid : replaced boolean return with true for no/uib/inf101/grid/Grid::positionIsOnGrid &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return isWithinRowBound &#38;&#38; isWithinColBound;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@510ee215_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridTestGetRowsAndCols()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenGetCoordinateOffGrid()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridNullsInDefaultConstructor()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridSanityTest()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenSetCoordinateOffGrid()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:prettyStringTest()]</li> <li>no.uib.inf101.tetris.model.tetromino.TetrominoTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.tetromino.TetrominoTest]/[method:tetrominoIterationOfS()]</li> <li>no.uib.inf101.pong.model.PongBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongBoardTest]/[method:testBoardWalls()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gridDimensionTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsBottomRowKeptTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsAllRowsRemovedTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsDifferentWidthTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:ballIsOnBoardTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:leftPaddleMovedTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:paddleIsOnBoardTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:rightPaddleMovedTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:gameOverTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:moveTetronimoTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:dropTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:rotateTetrominoTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:clockTickTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:scoresTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:clockTickTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:scoreTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gameOverTest()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_24'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[45],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[45],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=no.uib.inf101.grid.Grid,-method=<init>,-methodDesc=(IILjava/lang/Character;)V],-indexes=[45],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridTestGetRowsAndCols()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenGetCoordinateOffGrid()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridNullsInDefaultConstructor()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridSanityTest()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</li> <li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenSetCoordinateOffGrid()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:prettyStringTest()]</li> <li>no.uib.inf101.tetris.model.tetromino.TetrominoTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.tetromino.TetrominoTest]/[method:tetrominoIterationOfS()]</li> <li>no.uib.inf101.pong.model.PongBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongBoardTest]/[method:testBoardWalls()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gridDimensionTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsBottomRowKeptTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsAllRowsRemovedTest()]</li> <li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsDifferentWidthTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:ballIsOnBoardTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:leftPaddleMovedTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:paddleIsOnBoardTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:rightPaddleMovedTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:gameOverTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:moveTetronimoTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:dropTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:rotateTetrominoTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:clockTickTest()]</li> <li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:scoresTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:clockTickTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:scoreTest()]</li> <li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gameOverTest()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_33'>33</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_33'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rows<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridTestGetRowsAndCols()]</span></span> replaced int return with 0 for no/uib/inf101/grid/Grid::rows &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_38'>38</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_38'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>cols<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridTestGetRowsAndCols()]</span></span> replaced int return with 0 for no/uib/inf101/grid/Grid::cols &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>iterator<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>iterator<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>iterator<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>iterator<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>iterator<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()]</span></span> replaced return value with null for no/uib/inf101/grid/Grid::iterator &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_56'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>set<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_71'>71</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_71'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> replaced Character return value with 0 for no/uib/inf101/grid/Grid::get &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_76'>76</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_76'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_77'>77</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_77'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@510ee215_79'>79</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@510ee215_79'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>positionIsOnGrid<br/><b>Killed by : </b>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()]</span></span> replaced boolean return with true for no/uib/inf101/grid/Grid::positionIsOnGrid &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenGetCoordinateOffGrid()] (1 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridCanHoldNull()] (0 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:coordinateIsOnGridTest()] (1 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridNullsInDefaultConstructor()] (0 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridSanityTest()] (1 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:testIterator()] (1 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:throwsExceptionWhenSetCoordinateOffGrid()] (11 ms)</li><li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:prettyStringTest()] (1 ms)</li><li>no.uib.inf101.pong.model.PongBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongBoardTest]/[method:testBoardWalls()] (3 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gridDimensionTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsBottomRowKeptTest()] (0 ms)</li><li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsTest()] (0 ms)</li><li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsAllRowsRemovedTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisBoardTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisBoardTest]/[method:removeFullRowsDifferentWidthTest()] (1 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:ballIsOnBoardTest()] (3 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:leftPaddleMovedTest()] (0 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:paddleIsOnBoardTest()] (2 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:rightPaddleMovedTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:gameOverTest()] (0 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:moveTetronimoTest()] (4 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:dropTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:rotateTetrominoTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:clockTickTest()] (1 ms)</li><li>no.uib.inf101.tetris.model.TetrisModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.TetrisModelTest]/[method:scoresTest()] (15 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:clockTickTest()] (26 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:scoreTest()] (32 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gameOverTest()] (172 ms)</li><li>no.uib.inf101.grid.GridTest.[engine:junit-jupiter]/[class:no.uib.inf101.grid.GridTest]/[method:gridTestGetRowsAndCols()] (1 ms)</li><li>no.uib.inf101.tetris.model.tetromino.TetrominoTest.[engine:junit-jupiter]/[class:no.uib.inf101.tetris.model.tetromino.TetrominoTest]/[method:tetrominoIterationOfS()] (1 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.17.4
+
+</body>
+</html>

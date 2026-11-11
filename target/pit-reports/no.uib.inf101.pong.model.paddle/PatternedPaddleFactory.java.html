@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>PatternedPaddleFactory.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package no.uib.inf101.pong.model.paddle;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class PatternedPaddleFactory implements PaddleFactory {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public PongPaddle getNewPaddle() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        char c = &#39;w&#39;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_8'/>
+8
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_8'>1</a>
+<span>
+1. getNewPaddle : replaced return value with null for no/uib/inf101/pong/model/paddle/PatternedPaddleFactory::getNewPaddle &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return PongPaddle.paddleShape(c);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@77070012_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77070012_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@77070012_8'>8</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@77070012_8'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewPaddle<br/><b>Killed by : </b>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gridDimensionTest()]</span></span> replaced return value with null for no/uib/inf101/pong/model/paddle/PatternedPaddleFactory::getNewPaddle &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gridDimensionTest()] (1 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:ballIsOnBoardTest()] (3 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:leftPaddleMovedTest()] (0 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:paddleIsOnBoardTest()] (2 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:rightPaddleMovedTest()] (1 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:clockTickTest()] (26 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:scoreTest()] (32 ms)</li><li>no.uib.inf101.pong.model.PongModelTest.[engine:junit-jupiter]/[class:no.uib.inf101.pong.model.PongModelTest]/[method:gameOverTest()] (172 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.17.4
+
+</body>
+</html>
